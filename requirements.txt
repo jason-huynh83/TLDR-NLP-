@@ -11,4 +11,9 @@ matplotlib>=1.4.3
 pandas>=0.19
 nltk>=3.4.5
 sklearn
+<<<<<<< HEAD
 regex
+||||||| 686b334
+re
+=======
+>>>>>>> db1abe425a829703ef2b458ab4bce32c73df411d
