@@ -1,4 +1,4 @@
-Flask==1.1.1
+Flask>=1.1.1
 gunicorn==19.9.0
 itsdangerous==1.1.0
 Jinja2==2.10.1
@@ -10,4 +10,5 @@ scikit-learn>=0.18
 matplotlib>=1.4.3
 pandas>=0.19
 nltk>=3.4.5
-sklearn==0.19.2
+sklearn
+re
