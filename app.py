@@ -16,6 +16,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import sklearn
 import flask
+import regex
 nltk.download('stopwords')
 tf = TfidfVectorizer()
 
@@ -31,10 +32,10 @@ def index():
 def main_1():
     if flask.request.method == 'POST':
         article_text=request.form['article_text']
-        article_text = re.sub(r'\[[0-9]*\]', ' ', article_text)
-        article_text = re.sub(r'\s+', ' ', article_text)          
-        clean_article_text = re.sub('[^a-zA-z]', ' ', article_text)
-        clean_article_text = re.sub(r'\s+', ' ', clean_article_text)
+        article_text = regex.sub(r'\[[0-9]*\]', ' ', article_text)
+        article_text = regex.sub(r'\s+', ' ', article_text)          
+        clean_article_text = regex.sub('[^a-zA-z]', ' ', article_text)
+        clean_article_text = regex.sub(r'\s+', ' ', clean_article_text)
         sentence_list = nltk.sent_tokenize(article_text)
         word_list = nltk.word_tokenize(clean_article_text)           
         X = tf.fit_transform(sentence_list).toarray()
@@ -52,3 +53,4 @@ def main_1():
 
 if __name__ == '__main__':
     app.run(debug=True)        
+    

@@ -15,7 +15,7 @@ import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import sklearn
-import networkx as nx
+import regex
 #nltk.download('stopwords')
 tf = TfidfVectorizer()
 
@@ -24,11 +24,11 @@ def clean_text(article_text, num_sent):
     # Removing square brackets and extra spaces
     # Eliminate duplicate whitespaces using wildcards
     num_sent = num_sent
-    article_text = re.sub(r'\[[0-9]*\]', ' ', article_text)
-    article_text = re.sub(r'\s+', ' ', article_text)
+    article_text = regex.sub(r'\[[0-9]*\]', ' ', article_text)
+    article_text = regex.sub(r'\s+', ' ', article_text)
     
-    clean_article_text = re.sub('[^a-zA-z]', ' ', article_text)
-    clean_article_text = re.sub(r'\s+', ' ', clean_article_text)
+    clean_article_text = regex.sub('[^a-zA-z]', ' ', article_text)
+    clean_article_text = regex.sub(r'\s+', ' ', clean_article_text)
     sentence_list = nltk.sent_tokenize(article_text)
     word_list = nltk.word_tokenize(clean_article_text)
     tldr(sentence_list, num_sent)
@@ -74,7 +74,4 @@ if __name__ == '__main__':
     main()
     
     
-
-
-
 
