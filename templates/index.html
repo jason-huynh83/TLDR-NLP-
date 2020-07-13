@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Machine Learning NLP Web App with Flask
+		</div>
+		<h2>TLDR Text Summarization </h2>
+
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('main_1')}}" method="POST">
+		<p>Enter Your Message Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea class="form-control" rows="15" cols="75" name="article_text"></textarea>
+
+    <input type="Submit" onclick='main_1()' value="Submit" class="btn btn-primary ">
+    <input type="button" value="Clear" class="btn btn-outline-dark">
+
+    <a href="{{ url_for('index')}}" type="button" class="btn btn-danger" > Reset</a>
+
+	</form>
+
+	</div>
+
+	<div class='container'>
+		<div class='card'>
+			<div>
+				<p>{{text_str}}<p>
+
+
+
+</body>
+</html>
