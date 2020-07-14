@@ -31,6 +31,10 @@
 - Using cosine similarity, I was able to rank each sentence based on how similar it was compared to the text. 
 - After ranking each sentence, all sentences were sorted in descending order, and a summary of the top 3 sentences were chosen as a summary for the text. 
 
+![](Images/Cosine.PNG)
+
+- From the picture above, we can see the sentences ranked based on their Cosine Similarity.
+
 # How to run
 - Download app.py and the templates folder.
 - Open the command prompt and CD into the folder where app.py and templates folder is held
