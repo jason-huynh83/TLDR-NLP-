@@ -10,7 +10,7 @@
 # Code and Resources Used
 - Python Version 3.7
 	- Packages: Pandas, Numpy, nltk, regex, sklearn
-- Flask
+- Flask API
 - Heroku
 - HTML
 
