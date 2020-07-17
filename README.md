@@ -4,6 +4,9 @@
 ![](Images/before.PNG)
 
 ![](Images/after.PNG)
+
+- The above photo is the output of the short summary. 
+
 # Background
 - This project was intended to have a deeper understanding of Natural Langauge Processing (NLP) and the different packages of NLP (e.g. NLTK).
 
