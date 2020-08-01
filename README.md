@@ -41,5 +41,5 @@
 # How to run
 - Download app.py and the templates folder.
 - Open the command prompt and CD into the folder where app.py and templates folder is held
-- type:python app.py
+- type: python app.py
 
